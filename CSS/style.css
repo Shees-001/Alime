@@ -1,0 +1,39 @@
+/* ALIMÈ – theme on top of Bootstrap 5 */
+:root{
+  --blush:#F8E9ED; --rose:#B87591; --plum:#43283B; --champagne:#E8D5B9; --ivory:#FFFDFC;
+  --bs-body-font-family:'Poppins',sans-serif; --bs-body-color:var(--plum); --bs-body-bg:var(--ivory);
+}
+h1,h2,h3,h4,.brand-font{font-family:'Playfair Display',serif;font-weight:600}
+.navbar{background:var(--ivory);border-bottom:1px solid var(--champagne)}
+.navbar-brand img{height:60px;mix-blend-mode:multiply}
+.navbar .nav-link{color:var(--plum);padding-bottom:4px;margin-left:1.5rem;border-bottom:2px solid transparent}
+.navbar .nav-link.active,.navbar .nav-link:hover{border-bottom-color:var(--rose);color:var(--plum)}
+.btn-alime{background:var(--plum);color:var(--ivory);border-radius:50rem;padding:.8rem 2rem}
+.btn-alime:hover{background:#5a3850;color:var(--ivory)}
+.label{font-size:.8rem;letter-spacing:.2rem;text-transform:uppercase;color:#9A5A78}
+.section{padding:72px 0}
+.bg-blush{background:var(--blush)}
+.bg-champagne{background:var(--champagne)}
+.ph{background:var(--blush);color:#7A4A62;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.9rem}
+.ph-lg{height:460px;background:var(--champagne);border-radius:24px}
+.product-card{border:1px solid var(--champagne);border-radius:16px;overflow:hidden;background:#fff}
+.product-card .ph,.product-card img{height:260px;width:100%;object-fit:cover}
+.price{color:#9A5A78;font-weight:500}
+.site-footer{background:var(--plum);color:var(--blush);padding:36px 0;font-size:.9rem}
+.site-footer a{color:var(--blush)}
+/* Reviews slider */
+#reviewSlider .carousel-control-prev-icon,
+#reviewSlider .carousel-control-next-icon{filter:invert(1)}
+.review-dots{bottom:0;margin-bottom:0}
+.review-dots [data-bs-target]{background-color:var(--plum);width:10px;height:10px;border-radius:50%;border:0;margin:0 5px}
+.hero-img{width:100%;height:460px;object-fit:cover;border-radius:24px}
+.about-img{width:100%;height:460px;object-fit:cover;border-radius:24px}
+
+/* Contact page */
+.contact-card{background:#fff;border:1px solid var(--champagne);border-radius:16px;padding:20px 24px}
+.icon-circle{width:48px;height:48px;border-radius:50%;background:var(--blush);color:var(--plum);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.contact-link{color:var(--plum);text-decoration:underline;text-decoration-color:var(--rose)}
+.contact-link:hover{color:var(--rose)}
+.form-control{border-radius:12px;border-color:var(--champagne);padding:.7rem 1rem}
+.form-control:focus{border-color:var(--rose);box-shadow:0 0 0 .2rem rgba(184,117,145,.25)}
+.form-label{font-weight:500}
