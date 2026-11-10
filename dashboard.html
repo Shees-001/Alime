@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | ALIMÈ Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="CSS/style.css" rel="stylesheet">
+  <link href="CSS/admin.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+<div class="admin-shell">
+
+  <!-- SIDEBAR -->
+  <div class="side-col">
+    <aside class="offcanvas-lg offcanvas-start admin-side" tabindex="-1" id="sidebar" aria-label="Admin menu">
+      <div class="offcanvas-header d-lg-none">
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <img src="Images/logo.jpeg" alt="ALIMÈ" class="admin-logo">
+        <ul class="admin-nav">
+          <li><a href="dashboard.html" class="active"><i class="bi bi-grid"></i> Dashboard</a></li>
+          <li><a href="products.html"><i class="bi bi-bag"></i> Products</a></li>
+          <li><a href="#"><i class="bi bi-receipt"></i> Orders</a></li>
+          <li><a href="#"><i class="bi bi-people"></i> Customers</a></li>
+          <li><a href="#"><i class="bi bi-gear"></i> Settings</a></li>
+        </ul>
+        <ul class="admin-nav admin-logout">
+          <li><a href="login.html"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+    <div class="admin-top">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-outline-alime d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        <div>
+          <h1 class="h2 mb-0">Dashboard</h1>
+          <small class="login-muted">Sample data for the demo</small>
+        </div>
+      </div>
+      <div class="avatar">A</div>
+    </div>
+
+    <!-- STATS -->
+    <!-- STATS -->
+<div class="row g-3 mb-4">
+  <div class="col-6 col-xl-3"><div class="admin-card"><small class="login-muted">Total products</small><div class="stat-num mt-1" id="statProducts">0</div></div></div>
+  <div class="col-6 col-xl-3"><div class="admin-card"><small class="login-muted">Orders today</small><div class="stat-num mt-1" id="statToday">0</div></div></div>
+  <div class="col-6 col-xl-3"><div class="admin-card"><small class="login-muted">Pending orders</small><div class="stat-num mt-1" id="statPending">0</div></div></div>
+  <div class="col-6 col-xl-3"><div class="admin-card"><small class="login-muted">Total orders</small><div class="stat-num mt-1" id="statTotal">0</div></div></div>
+</div>
+
+    <div class="row g-3">
+      <!-- RECENT ORDERS -->
+      <div class="col-xl-8">
+        <div class="admin-card h-100">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h4 mb-0">Recent orders</h2>
+            <a href="#" class="btn btn-sm btn-outline-alime">View all</a>
+          </div>
+          <div class="table-responsive">
+            <table class="table admin-table align-middle mb-0">
+  <thead><tr><th>Order</th><th>Date</th><th>Product</th><th>Price</th><th>Status</th></tr></thead>
+  <tbody id="recentOrders"></tbody>
+</table>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEST SELLERS -->
+      <div class="col-xl-4">
+        <div class="admin-card h-100">
+          <h2 class="h4 mb-3">Best sellers</h2>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="Images/Customer favourite1.jpeg" alt="Gold Luxe Claw Clip" class="thumb">
+            <div><div class="fw-medium small">Gold Luxe Claw Clip</div><small class="login-muted">[00] orders</small></div>
+          </div>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="Images/Customer favourite2.jpeg" alt="Rose Sparkle Hair Clip" class="thumb">
+            <div><div class="fw-medium small">Rose Sparkle Hair Clip</div><small class="login-muted">[00] orders</small></div>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <img src="Images/Customer favourite3.jpeg" alt="Peachy Petal Claw" class="thumb">
+            <div><div class="fw-medium small">Peachy Petal Claw</div><small class="login-muted">[00] orders</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="JS/products.js"></script>
+<script src="JS/orderss.js"></script>
+<script src="JS/dashboard.js"></script>
+</body>
+</html>

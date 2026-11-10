@@ -17,8 +17,7 @@ h1,h2,h3,h4,.brand-font{font-family:'Playfair Display',serif;font-weight:600}
 .ph{background:var(--blush);color:#7A4A62;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.9rem}
 .ph-lg{height:460px;background:var(--champagne);border-radius:24px}
 .product-card{border:1px solid var(--champagne);border-radius:16px;overflow:hidden;background:#fff}
-.product-card .ph,.product-card img{height:260px;width:100%;object-fit:cover}
-.price{color:#9A5A78;font-weight:500}
+.product-card .ph,.product-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
 .site-footer{background:var(--plum);color:var(--blush);padding:36px 0;font-size:.9rem}
 .site-footer a{color:var(--blush)}
 /* Reviews slider */
@@ -37,3 +36,79 @@ h1,h2,h3,h4,.brand-font{font-family:'Playfair Display',serif;font-weight:600}
 .form-control{border-radius:12px;border-color:var(--champagne);padding:.7rem 1rem}
 .form-control:focus{border-color:var(--rose);box-shadow:0 0 0 .2rem rgba(184,117,145,.25)}
 .form-label{font-weight:500}
+.navbar .nav-user{
+  width:44px;height:44px;margin-left:1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--blush);color:var(--plum);
+  border:1px solid var(--champagne);
+  font-size:1.35rem;text-decoration:none;
+  transition:.2s;
+}
+.navbar .nav-user:hover{background:var(--plum);color:var(--ivory);border-color:var(--plum)}
+@media (max-width:991px){.navbar .nav-user{margin:12px 0 0}}
+/* Login page */
+.login-wrap{min-height:100vh}
+.login-left{position:relative;overflow:hidden;background:var(--blush);padding:56px 64px}
+.login-left-text{position:relative;z-index:1}
+.login-left small{position:relative}
+.login-left img{height:72px;border-radius:12px;mix-blend-mode:multiply}
+.login-left h1{font-size:3.4rem;line-height:1.15}
+.login-left .circle-lg,.login-left .circle-sm{position:absolute;border-radius:50%;z-index:-1}
+.login-left .circle-lg{width:260px;height:260px;right:-40px;top:-190px;background:var(--champagne)}
+.login-left .circle-sm{width:90px;height:90px;right:90px;top:-60px;background:var(--rose)}
+.login-muted{color:#6B5560}
+.login-right{padding:48px 24px}
+.login-form{width:100%;max-width:400px}
+.login-logo-sm{height:56px;border-radius:10px;mix-blend-mode:multiply}
+/* Form fields (skip if already added for the Contact page) */
+.form-control{border-radius:12px;border-color:var(--champagne);padding:.7rem 1rem}
+.form-control:focus{border-color:var(--rose);box-shadow:0 0 0 .2rem rgba(184,117,145,.25)}
+.form-label{font-weight:500}
+.form-check-input:checked{background-color:var(--plum);border-color:var(--plum)}
+.form-check-input:focus{border-color:var(--rose);box-shadow:0 0 0 .2rem rgba(184,117,145,.25)}
+.contact-link{color:var(--plum);text-decoration:underline;text-decoration-color:var(--rose)}
+.contact-link:hover{color:var(--rose)}
+
+/* ALIMÈ admin panel */
+.admin-body{background:var(--ivory)}
+.admin-shell{display:flex;min-height:100vh}
+.admin-main{flex:1;min-width:0;padding:28px 20px}
+
+/* Sidebar */
+.admin-side{--bs-offcanvas-bg:var(--plum);--bs-offcanvas-width:260px;color:var(--blush)}
+.admin-side .offcanvas-body{padding:24px 16px}
+@media (min-width:992px){
+  .side-col{width:250px;flex-shrink:0;background:var(--plum);position:sticky;top:0;height:100vh}
+  .admin-main{padding:40px}
+}
+.admin-logo{height:56px;border-radius:10px;margin-bottom:24px;align-self:flex-start}
+.admin-nav{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px}
+.admin-nav a{display:flex;align-items:center;gap:12px;color:var(--blush);text-decoration:none;padding:12px 16px;border-radius:12px;font-size:.95rem}
+.admin-nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.admin-nav a.active{background:var(--rose);color:#fff}
+.admin-logout{margin-top:auto}
+
+/* Top bar */
+.admin-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:500}
+
+/* Cards and tables */
+.admin-card{background:#fff;border:1px solid var(--champagne);border-radius:16px;padding:24px}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:600;line-height:1.1}
+.admin-table{--bs-table-bg:transparent}
+.admin-table th{font-size:.75rem;letter-spacing:.08rem;text-transform:uppercase;color:#6B5560;font-weight:500;white-space:nowrap}
+.admin-table td{vertical-align:middle}
+.thumb{width:48px;height:48px;object-fit:cover;border-radius:10px}
+.pill{display:inline-block;padding:.3rem .8rem;border-radius:50rem;font-size:.75rem}
+.pill-ok{background:#DDEBDD;color:#1F5130}
+.pill-wait{background:#F5E6C8;color:#6B4A12}
+.pill-off{background:#EADDE2;color:#5A3A4A}
+.btn-outline-alime{border:1px solid var(--plum);color:var(--plum);border-radius:50rem;background:#fff}
+.btn-outline-alime:hover{background:var(--plum);color:var(--ivory)}
+.upload-box{border:1px dashed var(--rose);border-radius:12px;padding:16px;background:#fff}
+
+.status-select{width:auto;min-width:125px;border-radius:50rem;font-size:.8rem;padding:.3rem 2rem .3rem .8rem}
+.status-select.pill-wait{background-color:#F5E6C8;color:#6B4A12}
+.status-select.pill-ok{background-color:#DDEBDD;color:#1F5130}
+.status-select.pill-off{background-color:#EADDE2;color:#5A3A4A}
