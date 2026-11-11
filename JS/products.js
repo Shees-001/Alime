@@ -1,8 +1,44 @@
 const PRODUCTS_KEY = "alimeProducts";
 
+const defaultProducts = [
+    {
+        id: 1,
+        name: "Gold Pair Bangles",
+        price: 250,
+        category: "Hair accessories",
+        description: "Elegant hair clip",
+        image: "Images/FixedProduct1.jpeg",
+        active: true
+    },
+    {
+        id: 2,
+        name: "Gold Ribbed Hoop Earrings",
+        price: 150,
+        category: "Jewelry",
+        description: "Beautiful pearl necklace",
+        image: "Images/FixedProduct2.jpeg",
+        active: true
+    },
+    {
+        id: 3,
+        name: "Cloud Fluff Claw Clip",
+        price: 150,
+        category: "Bags",
+        description: "Stylish handbag",
+        image: "Images/FixedProduct3.jpeg",
+        active: true
+    }
+];
+
 function getProducts() {
-  try { return JSON.parse(localStorage.getItem(PRODUCTS_KEY)) || []; }
-  catch (e) { return []; }
+    let products = localStorage.getItem(PRODUCTS_KEY);
+
+    if (products === null) {
+        localStorage.setItem(PRODUCTS_KEY, JSON.stringify(defaultProducts));
+        return defaultProducts;
+    }
+
+    return JSON.parse(products);
 }
 
 function saveProducts(list) {
